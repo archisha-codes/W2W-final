@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+.content-box {
+    width: 100%;
+    height: 39vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('/images/start_recycling.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'inter';
+    font-weight:medium;
+}
+
+.content-overlay {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 15px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'inter';
+    font-style:italic;
+}
+
+.contact-btn {
+    padding: 22px 48px;
+    font-size: -0.9rem;
+    font-weight: bold;
+    background: #B5F0BD;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    
+}
+
+.contact-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        height: 50vh;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .contact-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}

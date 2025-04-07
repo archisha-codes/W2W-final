@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #E7F8F5, #FFFFFF);
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-divider {
+            width: 502px;
+            height: 2.5px;
+            background: #000000;
+            margin: 2rem auto 4rem auto;
+            border: none;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-top:-89px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #000000;
+            text-align: center;
+            margin-bottom: -1rem;
+            font-weight: 600;
+        }
+
+        .service-row {
+            display: flex;
+            gap: 14rem;
+            align-items: center;
+            margin-bottom: 6rem;
+            margin-right:47px;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
+            flex: 9;
+            padding: 1.5rem;
+            background: #D9D9D9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .image-content {
+            flex: 2;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .image-content img {
+            width: 199%;
+            height: auto;
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .service-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            max-width: 90%;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 6rem auto;
+        }
+
+        .start-recycling-btn {
+            background-color: #46A136;
+            color: white;
+            padding: 2.2rem 3rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .start-recycling-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 0.3rem;
+            color: #666;
+            background: #D9D9D9;
+            margin-top: 4rem;
+            margin-left:-1080px;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                margin: 4rem auto;
+                padding: 0 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-row {
+                flex-direction: column;
+                gap: 3rem;
+                margin-bottom: 4rem;
+            }
+
+            .service-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .image-content {
+                order: -1;
+                width: 100%;
+            }
+
+            .text-content {
+                padding-right: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .service-item p {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .section-divider {
+                margin: 1.5rem auto 3rem auto;
+            }
+
+            .start-recycling-btn {
+                width: 90%;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Services</h1>
+        <h2>Waste Collection Services</h2>
+        <hr class="section-divider">
+
+        <!-- Doorstep Pickup -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Doorstep Pickup</h3>
+                    <p>Schedule a home pickup for your recyclables like plastic, paper, metal, or e-waste. A collection agent will visit your location at your chosen time. It’s a simple, convenient way to recycle responsibly.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/servicesimg.1.png" alt="Doorstep pickup service">
+            </div>
+        </div>
+
+        <!-- Drop-off Points -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Drop-off Points</h3>
+                    <p>Businesses set up designated collection centers for recyclable waste. Users can visit nearby locations to safely drop off items like plastic, paper, and e-waste. These points encourage responsible disposal and organized recycling.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/servicesimg2.png" alt="Recycling drop-off location">
+            </div>
+        </div>
+
+        <!-- Bulk Collection -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Bulk Waste Collection</h3>
+                    <p>Ideal for handling large volumes of recyclables from homes, offices, or industries. This service ensures efficient pickup and transportation of bulk materials. Perfect for organized recycling of paper, metals, or e-waste.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/servicesimg3.png" alt="Bulk waste collection">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Pickup Services</h2>
+        <hr class="section-divider">
+
+        <!-- On-Demand Service -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>On Demand Pickup</h3>
+                    <p>Users can request instant or scheduled pickup for their recyclables. It offers flexibility based on the user's time and convenience. A quick and reliable way to manage recyclable waste efficiently.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/serivcesimg4.png" alt="Mobile app interface">
+            </div>
+        </div>
+
+        <!-- Live Tracking -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Live Tracking</h3>
+                    <p>Get real-time updates on your pickup, including estimated arrival time. Track the status of your recyclable collection from start to finish. Stay informed and enjoy a transparent recycling experience.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/servicesimg5.png" alt="Live tracking map">
+            </div>
+        </div>
+
+        <!-- Instant Valuation -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Instant Valuation</h3>
+                    <p>Consumers receive an estimated price for their recyclables instantly. Know the value of your items before scheduling a pickup. This helps ensure transparency and fair pricing in the recycling process.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/servicesimg6.png" alt="Valuation interface">
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <button class="start-recycling-btn">Start Recycling</button>
+    </div>
+
+    <div class="copyright">
+        Copyright © 2025 Waste2Wealth All rights reserved.
+    </div>
+</body>
+</html>

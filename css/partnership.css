@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.white-section {
+    height: 40%;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-heading {
+    font-size: 60px;
+    color: #333;
+    text-align: center;
+    margin-top: -189px;
+}
+
+.black-section {
+    height: 60%;
+    width: 100%;
+    background: #000;
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+.column {
+    flex: 1;
+    color: white;
+    padding: 20px;
+    border-right: 1px solid #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+h2, h3, h4 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-size: 23px;
+}
+
+.contact-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.icon-green {
+    color: #4CAF50;
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+p1, p2, p3 {
+    display: flex;
+    line-height: 1.6;
+    color: #FFFFFF;
+    font-size: 19px;
+    
+}
+p3{
+    margin-left:36px;
+}
+
+.campaigns-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items:center;
+    font-size:18px;
+    margin-top:-1px;
+    
+}
+
+p4, p5, p6, p7, p8 {
+    font-size: 21px;
+    color: #FFFFFF;
+}
+
+.email-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 6px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    margin-top:50px;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .black-section {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .column {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        min-height: 400px;
+    }
+    
+    .main-heading {
+        margin-top: 0;
+        font-size: 40px;
+    }
+}

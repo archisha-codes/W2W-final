@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickup Details Form</title>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to bottom, #A8E6CF 4%, #FFFFFF 90%);
+        }
+
+        .container {
+            padding: 3rem 2rem;
+            width: 100%;
+            min-height: calc(100% - 20px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            align-content: start;
+        }
+
+        h1 {
+            color: #2d2d2d;
+            grid-column: 1 / -1;
+            margin: 0 0 2rem 0;
+            font-size: 2.2rem;
+            text-align: center;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 1.5px;
+            background: #000000;
+            border-radius: 2px;
+        }
+
+        .form-group {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(4px);
+            position: relative;
+        }
+
+        .form-group:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .input-container {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.9);
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #A8E6CF;
+            box-shadow: 0 0 8px rgba(168,230,207,0.3);
+        }
+
+        .floating-label {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            background: rgba(255,255,255,0.9);
+            padding: 0 5px;
+        }
+
+        input:focus ~ .floating-label,
+        input:not(:placeholder-shown) ~ .floating-label,
+        select:focus ~ .floating-label,
+        select:not([value=""]):valid ~ .floating-label {
+            top: -10px;
+            left: 0.8rem;
+            font-size: 0.8rem;
+            color: #2e7d32;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .button-container {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 0rem 0 2rem;
+        }
+
+        button {
+            background-color: #8a8686;
+            color: white;
+            padding: 1.2rem 5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background-color: #757575;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        button::after {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: right 0.3s ease;
+        }
+
+        button:hover::after {
+            right: 1.2rem;
+        }
+
+        .copyright {
+            height: 20px;
+            background-color: #8a8686;
+            color: #000000;
+            line-height: 20px;
+            font-size: 0.7rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-family: monospace;
+            backdrop-filter: blur(2px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .location-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+        }
+
+        .location-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .location-button i {
+            font-size: 1.1rem;
+        }
+
+        input[readonly] {
+            background-color: #f8f9fa;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+            
+            .location-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pickup Details</h1>
+        
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" ">
+                <label class="floating-label">Full Name</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" ">
+                <label class="floating-label">Product Name</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" " id="street">
+                <label class="floating-label">Street Address</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" placeholder=" " id="address-line2">
+                <label class="floating-label">Address Line 2 (Optional)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" " id="city">
+                <label class="floating-label">City</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" " id="pincode" pattern="\d*" maxlength="6">
+                <label class="floating-label">Pincode</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" " id="full-address" readonly>
+                <label class="floating-label">Full Address</label>
+                <button type="button" class="location-button" onclick="getLocation()">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Use Current Location
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="text" required placeholder=" ">
+                <label class="floating-label">Model</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="date" required>
+                <label class="floating-label">Select Pickup date</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-container">
+                <input type="date" required>
+                <label class="floating-label">Date of purchase</label>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">PROCEED</button>
+        </div>
+    </div>
+
+    <div class="copyright">
+        Copyright © 2025 Waste2Wealth • All rights reserved
+    </div>
+
+    <script>
+        // Geolocation functionality
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('street').value = data.address.road || '';
+                    document.getElementById('city').value = data.address.city || data.address.town || '';
+                    document.getElementById('pincode').value = data.address.postcode || '';
+                    document.getElementById('full-address').value = data.display_name || '';
+                })
+                .catch(error => {
+                    console.error('Error fetching address:', error);
+                    alert('Error fetching address details');
+                });
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Please enable location access to use this feature");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable");
+                    break;
+                case error.TIMEOUT:
+                    alert("Request timed out");
+                    break;
+                default:
+                    alert("Error fetching location");
+            }
+        }
+
+        // Date input handling
+        document.querySelectorAll('input[type="date"]').forEach(input => {
+            input.addEventListener('change', function() {
+                if(this.value) {
+                    this.parentNode.classList.add('has-value');
+                } else {
+                    this.parentNode.classList.remove('has-value');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
