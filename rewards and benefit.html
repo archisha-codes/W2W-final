@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #E7F8F5, #FFFFFF);
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-divider {
+            width: 502px;
+            height: 2.5px;
+            background: #000000;
+            margin: 2rem auto 4rem auto;
+            border: none;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-top:-89px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #000000;
+            text-align: center;
+            margin-bottom: -1rem;
+            font-weight: 600;
+        }
+
+        .service-row {
+            display: flex;
+            gap: 14rem;
+            align-items: center;
+            margin-bottom: 6rem;
+            margin-right:47px;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
+            flex: 9;
+            padding: 1.5rem;
+            background: #D9D9D9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .image-content {
+            flex: 2;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .image-content img {
+            width: 199%;
+            height: auto;
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .service-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            max-width: 90%;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin:1rem auto;
+        }
+
+        .start-recycling-btn {
+            background-color: #46A136;
+            color: white;
+            padding: 2.2rem 3rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .start-recycling-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 0.3rem;
+            color: #666;
+            background: #dadada;
+            margin-top: 10rem;
+            margin-left: -1207px;
+            margin-right: -190px;
+            margin-bottom: -297px;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                margin: 4rem auto;
+                padding: 0 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-row {
+                flex-direction: column;
+                gap: 3rem;
+                margin-bottom: 4rem;
+            }
+
+            .service-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .image-content {
+                order: -1;
+                width: 100%;
+            }
+
+            .text-content {
+                padding-right: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .service-item p {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .section-divider {
+                margin: 1.5rem auto 3rem auto;
+            }
+
+            .start-recycling-btn {
+                width: 90%;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Rewards & Benefits</h1>
+        <h2>Rewards for Consumers </h2>
+        <hr class="section-divider">
+
+        <!-- Doorstep Pickup -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Green Contribution Bonus:</h3>
+                    <p> Consumers receive bonus payments or reward points for contributing high-quality or bulk recyclable items like smartphones, laptops or recycling weight milestones (e.g., after 5 pickups or 25kg).</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/rewards1.png" alt="Doorstep pickup service">
+            </div>
+        </div>
+
+        <!-- Drop-off Points -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Surprise Recycle Boxes:</h3>
+                    <p> Send users surprise goodies like seed paper bookmarks, reusable straws, eco-bags, or even digital coupons for random recycling milestones..</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/rewards2.png" alt="Recycling drop-off location">
+            </div>
+        </div>
+
+        <!-- Bulk Collection -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Loyalty Points System:</h3>
+                    <p> Users collect points for each recycling transaction, redeemable for vouchers or rewards..</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/rewards3.png" alt="Bulk waste collection">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Benefits for Consumers</h2>
+        <hr class="section-divider">
+
+        <!-- On-Demand Service -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Free Pickup for Loyal Recyclers:</h3>
+                    <p> Enjoy complimentary waste pickups as a thank-you for your consistency.The more you recycle, the more perks you unlock like zero pickup charges..</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/rewards5.png" alt="Mobile app interface">
+            </div>
+        </div>
+
+        <!-- Live Tracking -->
+        <div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Sustainability Badges:</h3>
+                    <p> Earn digital badges and eco-certificates for your green contributions. 
+                        Celebrate milestones like "Tree Saver" or "Plastic-Free Hero.".</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/rewards6.png" alt="Live tracking map">
+            </div>
+        </div>
+
+        <!-- Instant Valuation -->
+        <!--<div class="service-row">
+            <div class="text-content">
+                <div class="service-item">
+                    <h3>Instant Valuation</h3>
+                    <p>Consumers receive an estimated price for their recyclables instantly. Know the value of your items before scheduling a pickup. This helps ensure transparency and fair pricing in the recycling process.</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="/images/rewards6.png" alt="Valuation interface">
+            </div>
+        </div>
+    </div>-->
+
+    <div class="cta-section">
+        <button class="start-recycling-btn">Claim for Rewards</button>
+    </div>
+
+    <div class="copyright">
+        Copyright © 2025 Waste2Wealth All rights reserved.
+    </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Samsung A31</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #A8E6CF, #FDFDFD);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .buy-btn {
+            background: #FFFFFF;
+            color: rgb(8, 245, 23);
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background: #45a049;
+        }
+
+        .login-btn {
+            background: #45a049;
+            border: 1px solid #e6e8e6;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #f5f5f5;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+            margin-left: 220px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .main-card {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 1050px;
+            height:466px;
+            margin: 0 auto;
+        }
+
+        .product-container {
+            display: flex;
+            gap: 30px;
+            align-items: start;
+            margin-bottom: 25px;
+        }
+
+        .product-image {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            margin-top: 26px;
+            word-spacing: 7px;
+        }
+
+        .sales-count {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .sales-count span {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .variant-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .variant-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .variant-box {
+            background: white;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .variant-box:hover {
+            background: #f0f0f0;
+        }
+
+        .variant-box.selected {
+            border-color: #4CAF50;
+            background: #f0fff4;
+        }
+
+        .value-btn {
+            background: #f5f5f5;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .value-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .copyright {
+            text-align: center;
+        color: #666;
+        padding: 20px;
+        background: #f5f5f5;
+        margin-top: 84px;
+        width: 104.8%;
+        position: relative;
+        left: 0;
+        margin-left: -52px;
+    }
+
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+            }
+            
+            .variant-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-image {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-buttons">
+        <button class="buy-btn">
+            🛒 Buy Now
+        </button>
+        <button class="login-btn">
+            Login
+        </button>
+    </div>
+
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Services</a> > <a href="#">Pickup Details</a> > <span>Sell Old Samsung A31</span>
+    </div>
+
+    <div class="main-card">
+        <div class="product-container">
+            <img src="/images/phone_image.png" alt="Samsung A31" class="product-image">
+            <div class="product-info">
+                <h2 class="product-title">Samsung Galaxy A31</h2>
+                <div class="sales-count">
+                    <span>500+</span> already sold on W2W
+                </div>
+            </div>
+        </div>
+
+        <div class="variant-card">
+            <h4>Choose a variant</h4>
+            <div class="variant-grid">
+                <div class="variant-box" onclick="selectVariant(this)">4GB/64GB</div>
+                <div class="variant-box" onclick="selectVariant(this)">4GB/128GB</div>
+                <div class="variant-box" onclick="selectVariant(this)">8GB/256GB</div>
+            </div>
+        </div>
+
+        <button class="value-btn" onclick="handleGetValue()">
+            Get Exact Value →
+        </button>
+    </div>
+
+    <div class="copyright">
+        Copyright © 2025 Waste2Wealth All rights reserved
+    </div>
+
+    <script>
+        let selectedVariant = null;
+
+        function selectVariant(element) {
+            // Remove selection from all variants
+            document.querySelectorAll('.variant-box').forEach(box => {
+                box.classList.remove('selected');
+            });
+            
+            // Add selection to clicked variant
+            element.classList.add('selected');
+            selectedVariant = element.textContent;
+        }
+
+        function handleGetValue() {
+            if (!selectedVariant) {
+                alert('Please select a variant first!');
+                return;
+            }
+            
+            // Redirect to valuation page with selected variant
+            window.location.href = `valuation.html?variant=${encodeURIComponent(selectedVariant)}`;
+        }
+    </script>
+</body>
+</html>
