@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Evaluation</title>
+    <title>Device Accessories Check</title>
     <style>
         * {
             margin: 0;
@@ -27,7 +27,7 @@
         }
 
         .buy-btn {
-            background: #45a049;
+            background: #46A136;
             color: white;
             padding: 12px 25px;
             border: none;
@@ -43,9 +43,9 @@
 
         .login-btn {
             background: #ffffff;
-            color: #45a049;
+            color: #08F517;
             padding: 12px 25px;
-            border: 1px solid #45a049;
+            border: 1px solid #08F517;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -56,10 +56,11 @@
         /* Main Container */
         .main-container {
             display: flex;
-            gap: 43px;
-            height: 178vh;
-            margin-top: -10px;
+            gap: 20px;
+            height: 359px;
+            min-height: 225vh;
         }
+        
 
         /* Left Box */
         .left-box {
@@ -70,44 +71,98 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        .issue-heading {
+        .question-heading {
             font-size: 28px;
             color: #2C3E50;
-            margin-bottom: 10px;
-            margin-left: 281px;
+            margin-bottom: 27px;
+            text-align: center;
         }
 
         .subtext {
             color: #666;
             margin-bottom: 30px;
-            margin-left: 249px;
-            margin-top: 32px;
-
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom:70px;
         }
 
-        .image-row {
-            width: 98%;
-            height: 18%;
-            margin-bottom: 47px;
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 36px;
+            margin-bottom: 30px;
+            height: 1350px;
+            width: 900px;
+            }
+
+        .image-item {
+            position: relative;
+            height: 271px;
+            border: 2px solid #000000;
             border-radius: 8px;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        .image-row img {
-            width: 100%;
-            height: 88%;
+        .image-item.gray {
+            border-color: #000000;
         }
+
+        .image-item img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .image-caption.green {
+            background-color: #bdc4be;
+            color: rgb(0, 0, 0);
+        }
+        .image-caption.green1 {
+            background-color: #41aa51;
+            color: rgb(0, 0, 0);
+            
+        }
+        .image-caption.gray2{
+            background-color: #41aa51;
+            color: rgb(0, 0, 0);
+            
+        }
+
+        .image-caption.gray {
+            background-color: #bdc4be;
+            color: #000000;
+        }
+
+        .image-caption h3 {
+            font-size: 13px;
+            margin: 5px 0;
+        }
+        
 
         .continue-btn {
-            background: #45a049;
-            color: rgb(255, 255, 255);
-            font-size:20px;
-            padding: 26px 78px;
+            background: #46A136;
+            color: black;
+            padding: 15px 40px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            margin-top: -39px;
-            margin-left: 362px;
+            width: 26%;
+            margin-left: 37%;
+            font-size: 21px;
+            margin-top: 30px;
+            display: block;
         }
         .continue-btn:hover {
             background: #0f6915;
@@ -123,28 +178,22 @@
             text-align: center;
         }
 
-        .device-image {
+        .accessory-image {
             width: 150px;
             height: 150px;
             object-fit: contain;
             margin: 0 auto 20px;
         }
 
-        .divider1 {
+        .divider {
             border-top: 2px solid black;
             margin: 20px 0;
-            width: 110%;
-            margin-left: -13px;
         }
-        
 
         .evaluation-heading {
             font-weight: bold;
             margin: 15px 0;
-            text-align:left;
-        }
-        .evaluation-heading p{
-            margin-left: -122px;
+            text-align: left;
         }
         .right-box p{
             text-align:left;
@@ -167,10 +216,9 @@
             background: #f5f5f5;
             width: 100%;
             padding: 25px;
-            margin: 5px 0;
+            margin: 20px 0 5px;
             border-radius: 8px;
             color: #666;
-            margin-top: 20px;
         }
 
         .copyright {
@@ -193,30 +241,123 @@
     <div class="main-container">
         <!-- Left Box -->
         <div class="left-box">
-            <h1 class="issue-heading">Any Technical Issue</h1>
-            <p class="subtext">So we can give you the most accurate value</p>
+            <h1 class="question-heading">Any technical issue?</h1>
+            <p class="subtext">so we can give you the most accurate value</p>
             
-            <div class="image-row">
-                <img src="/images/img1.jpg" alt="Issue 1">
+            <div class="image-grid">
+                <!-- Row 1 -->
+                <div class="image-item">
+                    <img src="/images/reimg1.jpg" alt="Accessory 1">
+                    <div class="image-caption green">
+                        <h3>Front camera not working</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg2.jpg" alt="Accessory 2">
+                    <div class="image-caption gray">
+                        <h3>Back camera not working</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="/images/reimg3.jpg" alt="Accessory 3">
+                    <div class="image-caption green1">
+                        <p1>WiFi not working</p1>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg4.jpg" alt="Accessory 4">
+                    <div class="image-caption gray">
+                        <h3>Finger touch not working</h3>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="image-item">
+                    <img src="/images/reimg5.jpg" alt="Accessory 5">
+                    <div class="image-caption green">
+                        <h3>Volume button not working</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg6.jpg" alt="Accessory 6">
+                    <div class="image-caption gray">
+                        <h3>Battery Faulty</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="/images/reimg7.jpg" alt="Accessory 7">
+                    <div class="image-caption green">
+                        <h3>Speaker faulty</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg8.jpg" alt="Accessory 8">
+                    <div class="image-caption gray2">
+                        <h3>Power button not working</h3>
+                    </div>
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="image-item">
+                    <img src="/images/reimg9.jpg" alt="Accessory 9">
+                    <div class="image-caption green">
+                        <h3>Charging port not working</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg10.jpg" alt="Accessory 10">
+                    <div class="image-caption gray">
+                        <h3>Face sensor not working </h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="/images/reimg11.jpg" alt="Accessory 11">
+                    <div class="image-caption green">
+                        <h3>Silent button not working</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg12.jpg" alt="Accessory 12">
+                    <div class="image-caption gray">
+                        <h3>Audio receiver not working</h3>
+                    </div>
+                </div>
+                
+                <!-- Row 4 -->
+                <div class="image-item">
+                    <img src="/images/reimg13.jpg" alt="Accessory 13">
+                    <div class="image-caption green">
+                        <h3>Camera glass broken</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg14.jpg" alt="Accessory 14">
+                    <div class="image-caption gray">
+                        <h3>Bluetooth not working</h3>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="/images/reimg15.jpg" alt="Accessory 15">
+                    <div class="image-caption green">
+                        <h3>Vibrator is not working</h3>
+                    </div>
+                </div>
+                <div class="image-item gray">
+                    <img src="/images/reimg16.jpg" alt="Accessory 16">
+                    <div class="image-caption gray">
+                        <h3>MIcrophone not working</h3>
+                    </div>
+                </div>
             </div>
-            <div class="image-row">
-                <img src="/images/img2.jpg" alt="Issue 2">
-            </div>
-            <div class="image-row">
-                <img src="/images/img3.jpg" alt="Issue 3">
-            </div>
-            <div class="image-row">
-                <img src="/images/img4.jpg" alt="Issue 4">
-            </div>
-
+            
             <button class="continue-btn">Continue</button>
         </div>
 
         <!-- Right Box -->
         <div class="right-box">
-            <img src="/images/phone_image.png" alt="Device" class="device-image">
-            <h3>Samsung Galaxy A31</h3>
-            <div class="divider1"></div>
+            <img src="/images/phone_image.png" alt="Charger" class="accessory-image">
+            <h3>Original Charger of Device</h3>
+            <div class="divider"></div>
             
             <h4 class="evaluation-heading">Device Evaluation</h4>
             <p>Device Details</p>
@@ -233,10 +374,10 @@
         IND: 12th floor, Excelling Geo & Engineering Consultant Pvt. Ltd.,<br>
         Building A Business coworking, Vatika Mindscapes,<br>
         Sector 270, Faridabad, Haryana (support@W2W.com)</p>
-        
+
         <small>All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</small>
     </div>
-    <div class="divider"></div>
+
     <div class="copyright">
         Copyright © 2025 Waste2Wealth All rights reserved
     </div>
